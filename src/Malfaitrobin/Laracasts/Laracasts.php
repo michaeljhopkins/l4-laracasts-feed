@@ -58,14 +58,13 @@ class Laracasts {
      */
     public function meta()
     {
-        $xml = $this->xml;
-        $xmlArray = (array) $xml;
-        unset($xmlArray['entry']);
+        $xml = (array) $this->xml;
+        unset($xml['entry']);
 
-        $xmlArray['link'] = (array) $xmlArray['link']->{"@attributes"};
-        $xmlArray['link'] = (object) $xmlArray['link'];
+        $xml['link'] = (array) $xml['link']->{"@attributes"};
+        $xml['link'] = (object) $xml['link'];
 
-        return (object) $xmlArray;
+        return (object) $xml;
     }
 
     /**
@@ -85,14 +84,15 @@ class Laracasts {
      */
     protected function getXML()
     {
-        if ($this->cache->has('xml_' . $this->url)) {
-            $this->xml = $this->cache->get('xml_' . $this->url);
+        $key = md5('xml_' . $this->url); // Everybody loves md5!
+        if ($this->cache->has($key)) {
+            $this->xml = $this->cache->get($key);
         } else {
             $this->xml = $this->fetchXML();
 
             $this->xml = $this->changeLinkElements($this->xml);
 
-            $this->cache->put('xml_' . $this->url, $this->xml, $this->cacheTime);
+            $this->cache->put($key, $this->xml, $this->cacheTime);
         }
     }
 
