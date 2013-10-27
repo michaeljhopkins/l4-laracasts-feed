@@ -1,0 +1,20 @@
+{
+    "name": "malfaitrobin/laracasts",
+    "description": "",
+    "authors": [
+        {
+            "name": "Robin Malfait",
+            "email": "malfait.robin@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.x"
+    },
+    "autoload": {
+        "psr-0": {
+            "Malfaitrobin\\Laracasts": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
