@@ -8,9 +8,15 @@ This is a simple laracasts feed wrapper; Get a list of the lessons from the feed
 
 Open your `composer.json` and add this to the `"require"`
 
-	"malfaitrobin/laracasts": "dev-master"
+```php
+"malfaitrobin/laracasts": "dev-master"
+```
 	
-Now do a `composer update`
+Now do a 
+
+```php
+composer update
+```
 
 ### Laravel4
 
