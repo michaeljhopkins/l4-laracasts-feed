@@ -84,7 +84,7 @@ class Laracasts {
      */
     protected function getXML()
     {
-        $key = md5($this->url); // Everybody loves md5!
+        $key = 'xml_' . md5($this->url); // Everybody loves md5!
 
         if ($this->cache->has($key)) {
             $this->xml = $this->cache->get($key);
