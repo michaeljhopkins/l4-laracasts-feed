@@ -61,8 +61,7 @@ class Laracasts {
         $xml = (array) $this->xml;
         unset($xml['entry']);
 
-        $xml['link'] = (array) $xml['link']->{"@attributes"};
-        $xml['link'] = (object) $xml['link'];
+        $xml['link'] = (object) $xml['link']->{"@attributes"};
 
         return (object) $xml;
     }
