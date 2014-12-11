@@ -1,6 +1,7 @@
 # Laravel4: Laracasts feed wrapper!
 
-This is a simple laracasts feed wrapper; Get a list of the lessons from the feed and get some meta data.
+This is a simple laracasts feed wrapper. 
+Get a list of the lessons from the feed and get some meta data.
 
 ## Installation
 
@@ -9,7 +10,7 @@ This is a simple laracasts feed wrapper; Get a list of the lessons from the feed
 Open your `composer.json` and add this to the `"require"`
 
 ```php
-"malfaitrobin/laracasts": "dev-master"
+"malfaitrobin/laracasts": "~1.0"
 ```
 	
 Now do a 

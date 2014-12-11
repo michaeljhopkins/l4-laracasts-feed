@@ -1,6 +1,8 @@
 {
     "name": "malfaitrobin/laracasts",
-    "description": "",
+    "description": "This is a simple laracasts feed wrapper; Get a list of the lessons from the feed and get some meta data.",
+    "keywords": ["laracasts", "laravel", "feed"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Robin Malfait",
@@ -8,13 +10,14 @@
         }
     ],
     "require": {
-        "php": ">=5.3.0",
-        "illuminate/support": "4.1.x"
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.x"
     },
     "autoload": {
         "psr-0": {
             "Malfaitrobin\\Laracasts": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
