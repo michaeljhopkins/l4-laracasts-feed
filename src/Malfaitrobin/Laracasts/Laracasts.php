@@ -30,7 +30,7 @@ class Laracasts {
      *
      * @var integer
      */
-    protected $cacheTime = 3600;
+    protected $cacheTime = 60;
 
     protected $xml;
 
